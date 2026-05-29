@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shimmer-sweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(350%); }
+}
+
+@keyframes card-shake {
+  0%,100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  15%     { transform: translate3d(-5px, 2px, 0) rotate(-0.6deg); }
+  30%     { transform: translate3d(5px, -2px, 0) rotate(0.6deg); }
+  45%     { transform: translate3d(-4px, 3px, 0) rotate(-0.3deg); }
+  60%     { transform: translate3d(4px, -1px, 0) rotate(0.3deg); }
+  75%     { transform: translate3d(-2px, 2px, 0) rotate(-0.2deg); }
+}
+
+.legendary-shimmer { animation: shimmer-sweep 2.5s linear infinite; }
+.epic-shimmer      { animation: shimmer-sweep 4s linear infinite; }
+.animate-card-shake { animation: card-shake 0.55s ease-in-out; }
